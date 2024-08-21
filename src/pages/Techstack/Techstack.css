@@ -1,0 +1,121 @@
+/* General Styles for Row Container */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap to the next line */
+    margin: -10px; /* Negative margin to offset padding on columns */
+  }
+  
+  /* Column Styles */
+  .col-md-3 {
+    flex: 1 1 100%; /* Full width on extra small screens */
+    padding: 10px; /* Space around columns */
+  }
+  
+  /* Card Styles */
+  .card {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    padding: 15px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #fff; /* Card background color */
+  }
+  
+  /* Card Hover Effect */
+  .card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  /* Card Content */
+  .card-content {
+    flex: 1; /* Allow card content to expand */
+  }
+  
+  /* Card Body */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+  }
+  
+  /* Media Object Alignment */
+  .media {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    text-align: center; /* Center text for smaller screens */
+  }
+  
+  .media .align-self-center {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  /* Technology Icon */
+  .tech-icon {
+    font-size: 2rem; /* Icon size */
+  }
+  
+  /* Responsive Adjustments */
+  @media (min-width: 576px) {
+    .col-sm-6 {
+      flex: 1 1 50%; /* Two columns on small screens */
+      max-width: 50%; /* Half width */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .col-md-3 {
+      flex: 1 1 33.33%; /* Three columns on medium screens */
+      max-width: 33.33%; /* One-third width */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .col-lg-3 {
+      flex: 1 1 25%; /* Four columns on large screens */
+      max-width: 25%; /* Quarter width */
+    }
+  }
+  
+  /* Adjustments for Techstack Container */
+  .techstack {
+    padding-left: 0; /* Reset padding on small screens */
+    padding-right: 0; /* Reset padding on small screens */
+    margin-top: 50px; /* Space above the section */
+    text-align: center; /* Center align text and cards */
+  }
+  
+  /* Horizontal Rule */
+  .techstack hr {
+    color: #138781; /* Line color */
+    width: 280px; /* Line width */
+    margin: 10px auto; /* Center align line */
+  }
+  
+  /* Heading Style */
+  .techstack h2 {
+    font-weight: bold;
+    color: #138781; /* Heading color */
+  }
+  
+  /* Responsive adjustments for Techstack */
+  @media (max-width: 600px) {
+    .col-md-3 {
+      flex: 1 1 100%; /* Full width on extra small screens */
+      max-width: 100%; /* Full width */
+    }
+  
+    .card {
+      padding: 10px; /* Reduced padding for smaller screens */
+    }
+  
+    .tech-icon {
+      font-size: 1.5rem; /* Reduced icon size */
+    }
+    
+    .techstack hr {
+      width: 200px; /* Adjust width for smaller screens */
+    }
+  }
+  

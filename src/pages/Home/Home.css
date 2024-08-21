@@ -1,0 +1,84 @@
+/* Base styles */
+.home-container {
+    height: auto; /* Changed to auto to handle content better */
+    color: white;
+    width: 100%; /* Changed to 100% to make it responsive */
+    background-color: black;
+    padding-left: 15px; /* Adjusted padding for smaller screens */
+    padding-right: 15px; /* Added padding for symmetry */
+    
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.home-content h1 {
+    padding: 10px;
+    padding-top: 80px;
+    text-align: center; /* Centered text for smaller screens */
+}
+
+.home-content h2 {
+    color: yellow;
+    padding: 10px;
+    text-align: center; /* Centered text for smaller screens */
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap; /* Wrap buttons if needed */
+}
+
+.home-buttons .btn-hire,
+.home-buttons .btn-cv {
+    background-color: #3b8ff3; /* Default color for both buttons */
+    color: white;
+    width: 180px;
+    margin: 10px; /* Added margin for spacing between buttons */
+    text-align: center;
+    padding: 10px;
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.home-buttons .btn-cv {
+    background-color: #f29f67; /* Specific color for CV button */
+}
+
+.home-buttons .btn-hire:hover,
+.home-buttons .btn-cv:hover {
+    transition: 1s;
+}
+
+.home-buttons .btn-hire:hover {
+    background-color: white;
+    color: #3b8ff3;
+    width: 190px;
+}
+
+.home-buttons .btn-cv:hover {
+    opacity: 0.8; /* Corrected opacity value */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .home-container {
+        padding-left: 10px; /* Less padding on smaller screens */
+        padding-right: 10px;
+    }
+
+    .home-content h1 {
+        padding-top: 50px; /* Reduced padding for smaller screens */
+    }
+
+    .home-buttons .btn-hire,
+    .home-buttons .btn-cv {
+        width: 150px; /* Smaller button width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 24px; /* Smaller font size for very small screens */
+    }
+}
